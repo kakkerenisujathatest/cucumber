@@ -60,7 +60,8 @@ public void user_on_home_page() {
 
 @Then("^user moves to new contact page$")
 public void user_moves_to_new_contact_page() {
-	driver.findElement(By.cssSelector (" div:nth-child(1) div.ui.fluid.container div.ui.left.fixed.vertical.icon.menu.sidebar-dark.left-to-right:nth-child(1) div.menu-item-wrapper:nth-child(3) > a.item")).click();
+	driver.findElement(By.xpath("//span[text()='Contacts']")).click();
+	driver.findElement(By.xpath("//span[text()='Contacts']//parent::a//following-sibling::button")).click();
 
 }
 
